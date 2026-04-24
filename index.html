@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <title>comms_exam_prep</title>
+</head>
+<body>
+    <!-- folder screen: landing page -->
+    <div class="folder-screen">
+        <img class="folder" src="folder.png" alt="folder icon">
+        <div class="folder-label">comms_exam_prep</div>
+    </div>
+
+    <!-- sticky screen -->
+    <div class="sticky-screen">
+        <div class="stack-wrapper">
+            <div class="ghost-card ghost-1"></div>
+            <div class="ghost-card ghost-2"></div>
+        
+            <!-- card 0: intro text -->
+            <div class="sticky-card active card-0 yellow" id="card-0">
+                <p class="sticky-text">
+                    Your Communications Lab exam is next Friday — you have exactly 7 days to prepare. What path will you choose? And what grade will it get you?
+                </p>
+                <button class="next-btn visible">Let's go →</button>
+            </div>
+
+            <!-- card 1: options 1 -->
+            <div class="sticky-card card-1 pink" id="card-1">
+                <p class="sticky-text">Today is Friday, the weekend has just started. What will you do?</p>
+                <div class="options-list" id="options-1">
+                    <!-- label allows the user to click anywhere on the option text or the option box to toggle the checkbox -->
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Start making notes for the exam</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Go on a road trip</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Complete your assignments</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Play video games</span>
+                    </label>
+                </div>
+                <button class="next-btn">Next →</button>
+            </div>
+
+            <!-- card 2: video -->
+            <div class="sticky-card card-2 orange" id="card-2">
+                <div class="video-wrapper" id="video-wrapper">
+                    <video id="main-video" controls></video>
+                </div>
+                <button class="next-btn visible" onclick="nextCard(2)">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
