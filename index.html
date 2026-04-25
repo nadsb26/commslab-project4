@@ -18,8 +18,11 @@
     <!-- sticky screen -->
     <div class="sticky-screen">
         <div class="stack-wrapper">
+            <!-- decorative cards stacked behind the active one -->
             <div class="ghost-card ghost-1"></div>
             <div class="ghost-card ghost-2"></div>
+            <div class="ghost-card ghost-3"></div>
+            <div class="ghost-card ghost-4"></div>
         
             <!-- card 0: intro text -->
             <div class="sticky-card active card-0 yellow" id="card-0">
@@ -55,16 +58,128 @@
             </div>
 
             <!-- card 2: video -->
-            <div class="sticky-card card-2 orange" id="card-2">
+            <div class="sticky-card card-2 green" id="card-2">
                 <div class="video-wrapper" id="video-wrapper">
                     <video id="main-video" controls></video>
                 </div>
                 <button class="next-btn visible" onclick="nextCard(2)">Next →</button>
             </div>
-        </div>
-    </div>
 
-    
+            <!-- card 3: options 1 -->
+            <div class="sticky-card card-3 purple" id="card-3">
+                <p class="sticky-text">It is Sunday now. You have university classes again tomorrow. Do you use the time you have today to:</p>
+                <div class="options-list" id="options-2">
+                    <!-- label allows the user to click anywhere on the option text or the option box to toggle the checkbox -->
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Read a book</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Stay up finishing a show</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Study at a café</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Celebrate a birthday</span>
+                    </label>
+                </div>
+                <button class="next-btn">Next →</button>
+            </div>
+
+            <!-- card 4: video -->
+            <div class="sticky-card card-4 orange" id="card-4">
+                <div class="video-wrapper" id="video-wrapper">
+                    <video id="main-video" controls></video>
+                </div>
+                <button class="next-btn visible" onclick="nextCard(2)">Next →</button>
+            </div>
+
+            <!-- card 5: options 3 -->
+            <div class="sticky-card card-5 lazure" id="card-5">
+                <p class="sticky-text">It is now Tuesday. You are tired after your classes. But you only have 3 more days till the exams. What would you do?</p>
+                <div class="options-list" id="options-3">
+                    <!-- label allows the user to click anywhere on the option text or the option box to toggle the checkbox -->
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Travel to an island to watch an Organ performance</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Go shopping</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Study Session with friend</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Go to the arcades with friends</span>
+                    </label>
+                </div>
+                <button class="next-btn">Next →</button>
+            </div>
+
+            <!-- card 6: video -->
+            <div class="sticky-card card-6 blue" id="card-66">
+                <div class="video-wrapper" id="video-wrapper">
+                    <video id="main-video" controls></video>
+                </div>
+                <button class="next-btn visible" onclick="nextCard(2)">Next →</button>
+            </div>
+
+            <!-- card 7: options 1 -->
+            <div class="sticky-card card-7 green" id="card-7">
+                <p class="sticky-text"> It is Thursday. This is the final stretch. Your exam starts at 9 AM tomorrow. What will you do?</p>
+                <div class="options-list" id="options-4">
+                    <!-- label allows the user to click anywhere on the option text or the option box to toggle the checkbox -->
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Solve past papers</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Procrastinate</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Run at a park to distress</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox">
+                        <span class="option-label">Cram all night</span>
+                    </label>
+                </div>
+                <button class="next-btn">Next →</button>
+            </div>
+
+            <!-- card 8: video -->
+            <div class="sticky-card card-8 purple" id="card-8">
+                <div class="video-wrapper" id="video-wrapper">
+                    <video id="main-video" controls></video>
+                </div>
+                <button class="next-btn visible" onclick="nextCard(2)">Next →</button>
+            </div>
+
+            <!-- card 9: reveal results -->
+            <div class="sticky-card card-9 pink" id="card-9">
+                <p class="sticky-text">Swipe to reveal your grade</p>
+                <div class="reveal-box">
+                    <!-- grade letter, revealed when cover is swiped away -->
+                    <div class="reveal-letter" id="reveal-letter"></div>
+                    <!-- dark cover slides left on swipe -->
+                    <div class="reveal-cover" id="reveal-cover">
+                        <span class="swipe-hint">← swipe</span>
+                    </div>
+                </div>
+                <!-- outcome text, fades in after reveal -->
+                <p class="sticky-text result-text" id="result-text"></p>
+            </div>
+        </div>
+    </div>    
     <script src="script.js"></script>
 </body>
 </html>
