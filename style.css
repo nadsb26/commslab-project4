@@ -73,6 +73,17 @@ body.sticky-active::before {
     z-index: 1;
 }
 
+.sticky-card:has(.video-wrapper) {
+    width: 340px;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
 /* card stack — holds ghost cards and the active sticky card, both centered */
 .stack-wrapper {
     position: relative;

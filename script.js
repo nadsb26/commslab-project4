@@ -47,13 +47,20 @@ document.querySelectorAll('.options-list').forEach((list, listIndex) => {
         });
     });
 });
-
 // next button navigation
 nextBtns.forEach((btn, i) => {
     btn.addEventListener('click', () => {
         const current = document.querySelector('.sticky-card.active');
         const next = cards[i + 1];
         if (!next) return;
+
+        // load selected video into next card if it has a video element
+        const selected = current.querySelector('input[type="checkbox"]:checked');
+        if (selected && next.querySelector('video')) {
+            const video = next.querySelector('video');
+            video.src = selected.dataset.video;
+            video.load();
+        }
 
         // play animation of current card going out
         current.classList.add('card-exiting');
