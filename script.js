@@ -62,6 +62,8 @@ nextBtns.forEach((btn, i) => {
             video.load();
         }
 
+        const videoEl = current.querySelector('video');
+        if (videoEl) { videoEl.pause(); videoEl.currentTime = 0; }
         // play animation of current card going out
         current.classList.add('card-exiting');
         setTimeout(() => {
